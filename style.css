@@ -1,0 +1,200 @@
+/* Custom styles for LLM Agent POC */
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-primary: #007bff;
+  --color-primary-dark: #0056b3;
+  --color-secondary: #f8f9fa;
+  --color-text: #343a40;
+  --color-text-secondary: #6c757d;
+  --color-border: #dee2e6;
+  --color-background: #f8f9fa;
+  --color-surface: #ffffff;
+  
+  --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-size-base: 1rem;
+  --space-8: 0.5rem;
+  --space-12: 0.75rem;
+  --space-16: 1rem;
+  --space-20: 1.25rem;
+  
+  --border-radius-base: 0.25rem;
+  --border-radius-lg: 0.5rem;
+  --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+[data-bs-theme="dark"] {
+  --color-primary: #52a8ff;
+  --color-primary-dark: #3a8ee2;
+  --color-secondary: #343a40;
+  --color-text: #e9ecef;
+  --color-text-secondary: #adb5bd;
+  --color-border: #495057;
+  --color-background: #212529;
+  --color-surface: #2c3135;
+}
+
+body {
+  height: 90vh;
+  margin: 0;
+  font-family: var(--font-family-base);
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.navbar {
+  background-color: var(--color-surface) !important;
+  border-bottom: 1px solid var(--color-border) !important;
+  padding: 0 0.5rem !important;   
+  min-height: 44px !important;   
+  height: 44px !important;     
+}
+
+.navbar .container-fluid {
+  padding: 0 !important;          
+  height: 44px !important;
+}
+
+.navbar .navbar-brand,
+.navbar .navbar-nav,
+.navbar .btn,
+.navbar small {
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 1.2 !important;
+  height: 44px !important;        
+  display: flex !important;
+  align-items: center !important; 
+}
+
+.navbar .btn {
+  font-size: 0.85rem !important;
+  height: 32px !important;       
+  padding: 0 8px !important;
+}
+
+.navbar .bi {
+  font-size: 0.9rem !important;   
+}
+
+.container-fluid {
+  height: calc(100vh - 76px);
+  padding: var(--space-16);
+}
+
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.card__header {
+  padding: var(--space-16);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.card__body {
+  padding: var(--space-16);
+}
+
+.d-grid {
+  display: grid;
+}
+
+.example-query {
+  text-align: left;
+}
+
+#chatMessages {
+  overflow-y: auto;
+  padding: var(--space-16);
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  display: flex;
+  margin-bottom: var(--space-16);
+  align-items: flex-start;
+}
+
+.user-message {
+  flex-direction: row-reverse;
+}
+
+.message__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.user-message .message__avatar {
+  background-color: var(--color-primary);
+}
+
+.assistant-message .message__avatar {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.message__content {
+  flex-grow: 1;
+  padding: var(--space-12);
+  border-radius: var(--border-radius-lg);
+  background-color: var(--color-secondary);
+  margin: 0 var(--space-12);
+}
+
+.user-message .message__content {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.message__time {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-8);
+}
+
+.user-message .message__time {
+  text-align: right;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.input-group {
+  margin-top: auto;
+}
+
+textarea.form-control {
+  font-family: var(--font-family-base);
+  resize: none;
+}
+
+#sendBtn {
+  border-radius: 0 var(--border-radius-base) var(--border-radius-base) 0;
+}
+
+/* Alerts */
+.alerts {
+  position: fixed;
+  top: 76px;
+  right: 0;
+  width: 100%;
+  max-width: 400px;
+  z-index: 1050;
+  padding: var(--space-16);
+}
+
+@media (max-width: 768px) {
+  .alerts {
+    max-width: 100%;
+  }
+}
