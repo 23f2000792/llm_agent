@@ -28,6 +28,6 @@ This project showcases how modern LLM-powered agents can combine language unders
 ---
 
 ## 🚀 Live Demo
-👉 [Try the Live Application](#) *(Demo link placeholder — add your deployment link here)*  
+👉 [Try the Live Application](#) *(https://llm-agent-five.vercel.app/)*  
 
 ---
