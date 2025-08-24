@@ -20,7 +20,6 @@ This project showcases how modern LLM-powered agents can combine language unders
 
 ### User Experience
 - 🎨 **Clean Modern UI**: Bootstrap 5 with custom theming  
-- 🌗 **Dark/Light Themes**: System-based detection + user preference  
 - ⚡ **Real-time Updates**: Live chat with typing indicators  
 - 📱 **Mobile Responsive**: Works seamlessly across devices  
 - 🔒 **Security First**: Sandboxed code execution with iframe isolation  
